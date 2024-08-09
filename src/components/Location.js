@@ -1,24 +1,20 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { Box, Container, Typography } from '@mui/material'
+import { Box, Button, Container, Typography } from '@mui/material'
 import { Link, } from 'react-router-dom'
 
 
 const Location = () => {
 
     const Image = styled('img')({
-        width: '25px',
-        alignItems: 'center',
-        justifyContent: 'center',
-        height: "auto",
-        cursor: 'pointer'
+       
     })
     return (
-        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px' }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px',flexDirection:'row' }}>
             <Link to="/location" >
                 <Image src="/assets/location.png" alt='Location' />
             </Link>
-            <Typography sx={{ color: 'black', fontFamily: 'revert', fontSize: '18px', fontWeight: "500" }}>Prayagraj</Typography>
+            <Typography sx={{ color: 'black', fontFamily: 'sans-serif', fontSize: '15px', }}>Prayagraj, Kalindipuram</Typography>
         </Box>
     )
 }

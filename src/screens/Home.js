@@ -1,8 +1,14 @@
+import { Box } from '@mui/material'
 import React from 'react'
+import Carousels from './Carousel'
+import Category from './Category'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <Box>
+      <Carousels/>
+      <Category/>
+    </Box>
   )
 }
 
