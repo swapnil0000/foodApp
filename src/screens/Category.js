@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import "./category.css";
 import { Box, Typography, useMediaQuery } from '@mui/material';
 import theme from '../theme/theme';
+import { Menuimg } from '../utils/common';
 
 const Category = () => {
     // Create references for the imgList, scrollRight, and scrollLeft elements
@@ -27,36 +28,14 @@ const Category = () => {
         <div>
      {!isMobileView && 
             <section>
-                <Typography sx={{ textAlign: 'left', margin: '10px', fontSize: '25px',fontWeight:'600' }}>Cateogry</Typography>
+                <Typography sx={{ textAlign: 'start', fontSize: '30px',fontWeight:'600',fontFamily:'montserrat',marginLeft:'20px',marginBottom:'10px' }}>Cateogry</Typography>
                 <ul id="imgList" ref={imgListRef} style={{ display: 'flex', overflowX: 'scroll', listStyle: 'none', padding: 0, margin: 0 }}>
+                {Menuimg.map((ele)=>(
                     <li>
-                    <img className='img' src="/assets/Image/MenuImage/pizza.png" alt="Img 1" />
-                    <Typography sx={{color:'white',fontSize:'18px',fontWeight:'600',fontFamily:'montserrat'}}>Pizza</Typography>
+                    <img className='img' src={ele.image} alt="Img 1" />
+                    <Typography sx={{color:'white',fontSize:'18px',fontWeight:'600',fontFamily:'montserrat'}}>{ele.name}</Typography>
                     </li>
-                    <li>
-                    <img className='img' src="/assets/Image/MenuImage/biryani.png" alt="Img 2" />
-                    <Typography  sx={{color:'white',fontSize:'18px',fontWeight:'600'}}>Biryani</Typography>
-                    </li>
-                    <li>
-                    <img className='img' src="/assets/Image/MenuImage/burger.png" alt="Img 3" />
-                    <Typography  sx={{color:'white',fontSize:'18px',fontWeight:'600'}}>Burger</Typography>
-                    </li>
-                    <li>
-                    <img className='img' src="/assets/Image/MenuImage/roll.png" alt="Img 4" />
-                    <Typography  sx={{color:'white',fontSize:'18px',fontWeight:'600'}}>Roll</Typography>
-                    </li>
-                    <li>
-                    <img className='img' src="/assets/Image/MenuImage/south.png" alt="Img 5" />
-                    <Typography  sx={{color:'white',fontSize:'18px',fontWeight:'600'}}>South Indian</Typography>
-                    </li>
-                    <li>
-                    <img className='img' src="/assets/Image/MenuImage/italian.png" alt="Img 6" />
-                    <Typography  sx={{color:'white',fontSize:'18px',fontWeight:'600'}}>Italian</Typography>
-                    </li>
-                    <li>
-                    <img className='img' src="/assets/Image/MenuImage/chinease.png" alt="Img 7" />
-                    <Typography  sx={{color:'white',fontSize:'18px',fontWeight:'600'}}>Chinese</Typography>
-                    </li>
+    ))}
                 </ul>
                 <div className="scroll-arrow" onClick={handleScrollLeft}>
                     &#8592;
@@ -66,9 +45,7 @@ const Category = () => {
                 </div>
             </section>
         }
-        <Box>
-         
-        </Box>
+
         </div>
     );
 }
