@@ -3,7 +3,7 @@ section {
     margin-top: 2.5%;
   }
   .scroll-arrow {
-    width: 10%;
+    width: 30%;
       display: inline-block;
       position: relative;
       vertical-align: middle;
@@ -11,7 +11,7 @@ section {
       padding:0;
       margin:0;
       opacity: 0.5;
-    font-size:34px;
+    font-size:54px;
     transition: 0.2s;
   }
   .scroll-arrow:hover {
