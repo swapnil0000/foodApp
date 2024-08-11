@@ -1,0 +1,22 @@
+
+  .text-animation {
+    position:relative;
+    font-size:40px;
+    font-weight:600;
+    color:#140f0f;
+    width:100vw;
+    height:200px;
+    text-align:center;
+    line-height:200px;
+    overflow:hidden;
+  }
+  .text-animation span {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    opacity:0;
+    text-transform:uppercase;
+    letter-spacing:5px;
+  }

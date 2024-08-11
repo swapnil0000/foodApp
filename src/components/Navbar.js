@@ -17,7 +17,7 @@ const Navbar = () => {
     })
     return (
         <AppBar position='sticky' sx={{ boxShadow: 'none' }}>
-            {!isMobileView && <Toolbar sx={{ backgroundColor: '#fff', display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+            {!isMobileView && <Toolbar sx={{ backgroundColor: '#fff', display: 'flex', flexDirection: 'row',alignItems:'center', justifyContent: 'space-between' }}>
                 <img src="/assets/logo.png" alt='logo' />
                 <InputStlye disableUnderline placeholder='What would you like to eat'
                     startAdornment={
@@ -36,7 +36,7 @@ const Navbar = () => {
             </Toolbar>}
             {isMobileView &&
                 <AppBar >
-                    <Toolbar sx={{backgroundColor:'white',display:'flex',flexDirection:'row',alignItems:'center',width:'100%',gap:'30px'}}>
+                    <Toolbar sx={{backgroundColor:'white',display:'flex',flexDirection:'row',alignItems:'center',width:'100%',gap:'30px',justifyContent:'space-between'}}>
                         <Drawers />
                         <Location />                
                         <Button variant='outlined' sx={{ color: 'orange', border: '1px solid orange' }}>Login</Button>
