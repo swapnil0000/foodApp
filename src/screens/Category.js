@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import "./category.css";
+import "../styles/category.css"
 import { Box, Typography, useMediaQuery } from '@mui/material';
 import theme from '../theme/theme';
 import { Menuimg } from '../utils/common';
@@ -26,13 +26,15 @@ const Category = () => {
 
     return (
         <div>
-     {!isMobileView && 
             <section>
-                <Typography sx={{ textAlign: 'start', fontSize: '30px',fontWeight:'600',fontFamily:'montserrat',marginLeft:'20px',marginBottom:'10px' }}>Cateogry</Typography>
+                <Typography sx={{ textAlign: 'start', fontSize: '30px',fontWeight:'600',fontFamily:'montserrat',marginLeft:'20px',marginBottom:'10px',color:'whitesmoke' }}>Cateogry</Typography>
                 <ul id="imgList" ref={imgListRef} style={{ display: 'flex', overflowX: 'scroll', listStyle: 'none', padding: 0, margin: 0 }}>
                 {Menuimg.map((ele)=>(
                     <li>
-                    <img className='img' src={ele.image} alt="Img 1" />
+                    <img style={{objectFit:'cover',  transition: 'transform 0.3s ease-in-out',
+                        '&:hover': {
+                            transform: 'scale(1.1)',
+                        }}} className='img' src={ele.image} alt="Img 1" />
                     <Typography sx={{color:'white',fontSize:'18px',fontWeight:'600',fontFamily:'montserrat'}}>{ele.name}</Typography>
                     </li>
     ))}
@@ -44,8 +46,6 @@ const Category = () => {
                     &#8594;
                 </div>
             </section>
-        }
-
         </div>
     );
 }
